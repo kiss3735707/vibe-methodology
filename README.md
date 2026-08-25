@@ -1,6 +1,6 @@
 # Vibe Coding 方法论（VCM v1.1）
 
-一套面向 AI 辅助开发（vibe coding）的工程化管理方法论。在 [Karpathy 四原则](https://github.com/multica-ai/andrej-karpathy-skills)（先思考 / 简洁优先 / 外科手术 / 目标驱动）之上，叠加 **SSOT 进度管理 + Git 纪律 + 上下文预算** 三层，让 AI 犯错有代价、进展有记录、上下文可接力。
+一套面向 AI 辅助开发（vibe coding）的工程化管理方法论（[MIT License](LICENSE)）。在 [Karpathy 四原则](https://github.com/multica-ai/andrej-karpathy-skills)（先思考 / 简洁优先 / 外科手术 / 目标驱动）之上，叠加 **SSOT 进度管理 + Git 纪律 + 上下文预算** 三层，让 AI 犯错有代价、进展有记录、上下文可接力。
 
 Cursor 工作流已拆成项目 skill（`.cursor/skills/`）：启动、里程碑、交接。四原则留在 `AGENTS.md`，不再做成第四个 skill。
 
@@ -31,6 +31,31 @@ Cursor 工作流已拆成项目 skill（`.cursor/skills/`）：启动、里程�
 | `templates/PROGRESS.md` | 进度 SSOT 模板 | 项目启动时复制 |
 | `templates/ARCHITECTURE.md` | 模块地图模板 | 项目启动时复制 |
 | `examples/success-criteria.md` | 成功标准对照示例 | 人读；不要抄进模板 |
+| `LICENSE` | MIT | 允许复制、修改、再分发（含商用）；保留版权与许可声明即可 |
+
+## 安装 Cursor skills
+
+需要 [Cursor 2.4+](https://cursor.com/changelog/2-4)（Agent Skills）。每个 skill 是「目录 + `SKILL.md`」，不要把三个 `SKILL.md` 平铺拷贝。不要写入 `~/.cursor/skills-cursor/`（Cursor 内置目录）。
+
+```bash
+git clone https://github.com/kiss3735707/vibe-methodology.git
+cd vibe-methodology
+
+# 项目级：只在某个产品仓库生效（可随仓库共享给同事）
+mkdir -p <你的项目>/.cursor/skills
+cp -R .cursor/skills/* <你的项目>/.cursor/skills/
+
+# 全局级：对本机所有项目生效
+mkdir -p ~/.cursor/skills
+cp -R .cursor/skills/* ~/.cursor/skills/
+```
+
+装完后**新开一个 Agent 对话**。触发方式：
+
+- 自然语言：说「按 VCM 初始化」「按 VCM 做 M3」「先交接再走」
+- 显式点名：`/vibe-bootstrap`、`/vibe-milestone`、`/vibe-handoff`
+
+Skill 只是工作流。新项目仍要复制 `templates/` 和 `CORE.md`（见下方）。全局安装后，`vibe-bootstrap` 会先在当前工作区找 `templates/`；找不到则按骨架生成，并提示从本仓库取完整模板。
 
 ## 快速上手（新项目）
 
@@ -62,3 +87,7 @@ cp /path/to/vibe-methodology/CORE.md ./AGENTS.md   # 或 CLAUDE.md
 ## 核心理念一句话
 
 > 让 AI **犯错有代价**（验证 + git 回滚）、**进展有记录**（状态只落文件）、**上下文可接力**（交接块 + 恢复流程）。
+
+## License
+
+[MIT](LICENSE)。可以合规地用在自己的项目里（含商用）；再分发时保留版权声明和本许可即可。
