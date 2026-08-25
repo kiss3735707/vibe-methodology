@@ -1,6 +1,6 @@
 # Vibe Coding 方法论（完整版）
 
-> 版本 v1.1 · MIT License · 配套：`README.md`（总览）、`CORE.md` / `AGENTS.md`（给 AI 的核心规则）、`.cursor/skills/`（工作流 skill）、`templates/`（脚手架）
+> 版本 v1.1 · MIT License · 配套：`README.md`（总览）、`CORE.md`（给 AI 的核心规则；本仓库 `AGENTS.md` 为其符号链接）、`.cursor/skills/`（工作流 skill）、`templates/`（脚手架）
 >
 > **定位**：这是你自己读的操作手册；`CORE.md` 才是复制给 AI 看的规则。Skill 是步骤，不是这篇手册的缩写。
 
@@ -323,4 +323,4 @@ Agent 走 skill `vibe-handoff`。上下文紧张 / 会话将结束时，先写�
 工具无关。`CORE.md` 按工具改名为 `CLAUDE.md` 或 `AGENTS.md`。Cursor skills 的具体安装步骤见 `README.md`「安装 Cursor skills」（项目级 / 全局级；需要 Cursor 2.4+）。
 
 **Q：要不要再做一个「四原则」skill？**
-不要。四原则常驻 `AGENTS.md`；skill 只承载启动、里程碑、交接。
+不要。四原则常驻 `CORE.md`；skill 只承载启动、里程碑、交接。

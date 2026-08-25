@@ -1,6 +1,7 @@
 # AI 协作核心规则（VCM）
 
 > 本文件来自 Vibe Coding 方法论（VCM）。复制到项目根目录：Cursor / Codex 用 `AGENTS.md`，Claude Code 用 `CLAUDE.md`（内容相同）。
+> 本仓库里的 `AGENTS.md` 是指向本文件的符号链接，只改 `CORE.md`。`cp CORE.md ./AGENTS.md` 会得到普通文件。
 > 工作流按需加载 skill：`vibe-bootstrap` / `vibe-milestone` / `vibe-handoff`。原理见 `METHODOLOGY.md`（给人读，不要整本加载）。
 
 ## 0. 项目真相（动手前必读）

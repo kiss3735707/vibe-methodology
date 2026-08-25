@@ -2,7 +2,7 @@
 
 一套面向 AI 辅助开发（vibe coding）的工程化管理方法论（[MIT License](LICENSE)）。在 [Karpathy 四原则](https://github.com/multica-ai/andrej-karpathy-skills)（先思考 / 简洁优先 / 外科手术 / 目标驱动）之上，叠加 **SSOT 进度管理 + Git 纪律 + 上下文预算** 三层，让 AI 犯错有代价、进展有记录、上下文可接力。
 
-Cursor 工作流已拆成项目 skill（`.cursor/skills/`）：启动、里程碑、交接。四原则留在 `AGENTS.md`，不再做成第四个 skill。
+Cursor 工作流已拆成项目 skill（`.cursor/skills/`）：启动、里程碑、交接。四原则写在 `CORE.md`（本仓库 `AGENTS.md` 是它的符号链接），不再做成第四个 skill。
 
 ## 这套方法解决什么
 
@@ -21,8 +21,8 @@ Cursor 工作流已拆成项目 skill（`.cursor/skills/`）：启动、里程�
 
 | 文件 | 角色 | 谁用 |
 |------|------|------|
-| `CORE.md` | 核心规则（常驻） | **复制进每个项目根目录**，命名 `AGENTS.md` 或 `CLAUDE.md` |
-| `AGENTS.md` | 与 `CORE.md` 相同 | 本方法论仓库自用（Cursor 会读它） |
+| `CORE.md` | 核心规则（常驻，唯一正文） | **复制进每个项目根目录**，命名 `AGENTS.md` 或 `CLAUDE.md` |
+| `AGENTS.md` | 指向 `CORE.md` 的符号链接 | 本仓库 Cursor 读取；不要另写一份 |
 | `METHODOLOGY.md` | 完整手册 | 你自己读，不必给 AI |
 | `.cursor/skills/vibe-bootstrap/` | 绿场 / 棕场启动 | Agent 按需加载 |
 | `.cursor/skills/vibe-milestone/` | 里程碑循环 / 修 bug / DoD | Agent 按需加载 |
